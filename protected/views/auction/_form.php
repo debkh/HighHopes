@@ -30,18 +30,7 @@
 		<?php endif; ?>
 		<?php echo $form->textField($model, 'description', array('size' => 60, 'maxlength' => 512, 'class' => 'text_field')); ?>
 	</div>
-		
-	<div class="group">
-		<?php if($model->hasErrors('other')): ?>
-			<div class="fieldWithErrors">
-		<?php endif; ?>
-		<?php echo $form->labelEx($model, 'other', array('class' => 'label')); ?>
-		<?php if ($model->hasErrors('other')): ?>
-				<span class="error"><?php echo $model->getError('other'); ?></span>
-			</div>
-		<?php endif; ?>
-		<?php echo $form->textField($model, 'other', array('class' => 'text_field')); ?>
-	</div>
+
 	
 	<div class="group navform wat-cf">
 		<button class="button" type="submit">

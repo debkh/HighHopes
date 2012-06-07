@@ -23,7 +23,7 @@ return array(
 
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'oblachko1991',
+			'password'=>'1qw',
             'generatorPaths'=>array(
                 'application.gii',   // a path alias
             ),
@@ -56,38 +56,34 @@ return array(
 		// uncomment the following to use a MySQL database
         */
 		'db'=>array(
-			'connectionString' => 'mysql:host=openserver;dbname=dev_highhopes',
+			'connectionString' => 'mysql:host=localhost;dbname=dev_highhopes',
 			'emulatePrepare' => true,
-			'username' => 'mysql',
-			'password' => 'mysql',
+			'username' => 'root',
+			'password' => '1',
 			'charset' => 'utf8',
+            'enableProfiling'=>true,
+            'enableParamLogging'=>true,
 		),
 
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
             'errorAction'=>'site/error',
         ),
-		'log'=>array(
-			'class'=>'CLogRouter',
-			'routes'=>array(
-				array(
-					'class'=>'CFileLogRoute',
-					'levels'=>'error, warning',
-				),
-				// uncomment the following to show log messages on web pages
-				/*
-				array(
-					'class'=>'CWebLogRoute',
-				),
-				*/
-			),
-		),
+        'log'=>array(
+            'class'=>'CLogRouter',
+            'routes'=>array(
+                array(
+                    'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
+                    'ipFilters'=>array('127.0.0.1',''),
+                ),
+            ),
+        ),
 	),
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'dmitry.oblachko@gmail.com',
 	),
 );

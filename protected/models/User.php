@@ -53,7 +53,8 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-		);
+            'owner' => array(self::HAS_MANY, 'Auction', 'user_id'),
+        );
 	}
 
 	/**

@@ -75,3 +75,239 @@ Stack trace:
 REQUEST_URI=/index.php/auction/create
 in G:\web\domains\highhopes\protected\controllers\AuctionController.php (91)
 in G:\web\domains\highhopes\index.php (13)
+2012/06/07 09:49:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2005] Unknown MySQL server host 'openserver' (2)' in /Volumes/Data/projects/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Volumes/Data/projects/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Volumes/Data/projects/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Volumes/Data/projects/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Volumes/Data/projects/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(615): CApplication->getDb()
+#5 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Auction))
+#7 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(394): CActiveRecord::model('Auction')
+#8 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#9 /Volumes/Data/projects/HighHopes/protected/controllers/AuctionController.php(45): CActiveRecord->__construct('search')
+#10 /Volumes/Data/projects/yii/framework/web/actions/CInlineAction.php(50): AuctionController->actionIndex()
+#11 /Volumes/Data/projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 /Volumes/Data/projects/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Volumes/Data/projects/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 /Volumes/Data/projects/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 /Volumes/Data/projects/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /Volumes/Data/projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(276): CController->run('')
+#20 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#21 /Volumes/Data/projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /Volumes/Data/projects/HighHopes/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://highhopes/index.php/site/login
+---
+2012/06/07 09:52:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'mysql'@'localhost' (using password: YES)' in /Volumes/Data/projects/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Volumes/Data/projects/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Volumes/Data/projects/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Volumes/Data/projects/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Volumes/Data/projects/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(615): CApplication->getDb()
+#5 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Auction))
+#7 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(394): CActiveRecord::model('Auction')
+#8 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#9 /Volumes/Data/projects/HighHopes/protected/controllers/AuctionController.php(45): CActiveRecord->__construct('search')
+#10 /Volumes/Data/projects/yii/framework/web/actions/CInlineAction.php(50): AuctionController->actionIndex()
+#11 /Volumes/Data/projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 /Volumes/Data/projects/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Volumes/Data/projects/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 /Volumes/Data/projects/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 /Volumes/Data/projects/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /Volumes/Data/projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(276): CController->run('')
+#20 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#21 /Volumes/Data/projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /Volumes/Data/projects/HighHopes/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://highhopes/index.php/site/login
+---
+2012/06/07 09:53:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'dev_highhopes'' in /Volumes/Data/projects/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Volumes/Data/projects/yii/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /Volumes/Data/projects/yii/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /Volumes/Data/projects/yii/framework/base/CModule.php(388): CDbConnection->init()
+#3 /Volumes/Data/projects/yii/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(615): CApplication->getDb()
+#5 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Auction))
+#7 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(394): CActiveRecord::model('Auction')
+#8 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(78): CActiveRecord->getMetaData()
+#9 /Volumes/Data/projects/HighHopes/protected/controllers/AuctionController.php(45): CActiveRecord->__construct('search')
+#10 /Volumes/Data/projects/yii/framework/web/actions/CInlineAction.php(50): AuctionController->actionIndex()
+#11 /Volumes/Data/projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 /Volumes/Data/projects/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#14 /Volumes/Data/projects/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#15 /Volumes/Data/projects/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#16 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 /Volumes/Data/projects/yii/framework/web/CController.php(292): CFilterChain->run()
+#18 /Volumes/Data/projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(276): CController->run('')
+#20 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#21 /Volumes/Data/projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#22 /Volumes/Data/projects/HighHopes/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://highhopes/index.php/site/login
+---
+2012/06/07 10:02:53 [error] [exception.CException] exception 'CException' with message 'Property "Auction.other" is not defined.' in /Volumes/Data/projects/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('other')
+#1 /Volumes/Data/projects/HighHopes/protected/models/Auction.php(89): CActiveRecord->__get('other')
+#2 /Volumes/Data/projects/HighHopes/protected/views/auction/_grid.php(1): Auction->search()
+#3 /Volumes/Data/projects/yii/framework/web/CBaseController.php(127): require('/Volumes/Data/p...')
+#4 /Volumes/Data/projects/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Volumes/Data/p...', Array, true)
+#5 /Volumes/Data/projects/yii/framework/web/CController.php(870): CBaseController->renderFile('/Volumes/Data/p...', Array, true)
+#6 /Volumes/Data/projects/HighHopes/protected/views/auction/index.php(21): CController->renderPartial('_grid', Array)
+#7 /Volumes/Data/projects/yii/framework/web/CBaseController.php(127): require('/Volumes/Data/p...')
+#8 /Volumes/Data/projects/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Volumes/Data/p...', Array, true)
+#9 /Volumes/Data/projects/yii/framework/web/CController.php(870): CBaseController->renderFile('/Volumes/Data/p...', Array, true)
+#10 /Volumes/Data/projects/yii/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#11 /Volumes/Data/projects/HighHopes/protected/controllers/AuctionController.php(61): CController->render('index', Array)
+#12 /Volumes/Data/projects/yii/framework/web/actions/CInlineAction.php(50): AuctionController->actionIndex()
+#13 /Volumes/Data/projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#14 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 /Volumes/Data/projects/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#16 /Volumes/Data/projects/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 /Volumes/Data/projects/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 /Volumes/Data/projects/yii/framework/web/CController.php(292): CFilterChain->run()
+#20 /Volumes/Data/projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(276): CController->run('')
+#22 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('')
+#23 /Volumes/Data/projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Volumes/Data/projects/HighHopes/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/
+HTTP_REFERER=http://highhopes/index.php/site/login
+---
+2012/06/07 10:03:39 [error] [exception.CException] exception 'CException' with message 'Property "Auction.other" is not defined.' in /Volumes/Data/projects/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('other')
+#1 /Volumes/Data/projects/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('other')
+#2 /Volumes/Data/projects/yii/framework/web/helpers/CHtml.php(1774): CHtml::resolveValue(Object(Auction), 'other')
+#3 /Volumes/Data/projects/yii/framework/web/helpers/CHtml.php(1205): CHtml::activeInputField('text', Object(Auction), 'other', Array)
+#4 /Volumes/Data/projects/yii/framework/web/widgets/CActiveForm.php(575): CHtml::activeTextField(Object(Auction), 'other', Array)
+#5 /Volumes/Data/projects/HighHopes/protected/views/auction/_form.php(43): CActiveForm->textField(Object(Auction), 'other', Array)
+#6 /Volumes/Data/projects/yii/framework/web/CBaseController.php(127): require('/Volumes/Data/p...')
+#7 /Volumes/Data/projects/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Volumes/Data/p...', Array, true)
+#8 /Volumes/Data/projects/yii/framework/web/CController.php(870): CBaseController->renderFile('/Volumes/Data/p...', Array, true)
+#9 /Volumes/Data/projects/HighHopes/protected/views/auction/create.php(13): CController->renderPartial('_form', Array)
+#10 /Volumes/Data/projects/yii/framework/web/CBaseController.php(127): require('/Volumes/Data/p...')
+#11 /Volumes/Data/projects/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Volumes/Data/p...', Array, true)
+#12 /Volumes/Data/projects/yii/framework/web/CController.php(870): CBaseController->renderFile('/Volumes/Data/p...', Array, true)
+#13 /Volumes/Data/projects/yii/framework/web/CController.php(783): CController->renderPartial('create', Array, true)
+#14 /Volumes/Data/projects/HighHopes/protected/controllers/AuctionController.php(96): CController->render('create', Array)
+#15 /Volumes/Data/projects/yii/framework/web/actions/CInlineAction.php(50): AuctionController->actionCreate()
+#16 /Volumes/Data/projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#17 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 /Volumes/Data/projects/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#19 /Volumes/Data/projects/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 /Volumes/Data/projects/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 /Volumes/Data/projects/yii/framework/web/CController.php(292): CFilterChain->run()
+#23 /Volumes/Data/projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(276): CController->run('create')
+#25 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('auction/create')
+#26 /Volumes/Data/projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#27 /Volumes/Data/projects/HighHopes/index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/index.php/auction/create
+HTTP_REFERER=http://highhopes/
+---
+2012/06/07 10:57:29 [error] [exception.CException] exception 'CException' with message 'Property "Auction.other" is not defined.' in /Volumes/Data/projects/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('other')
+#1 /Volumes/Data/projects/yii/framework/web/helpers/CHtml.php(1696): CActiveRecord->__get('other')
+#2 /Volumes/Data/projects/yii/framework/zii/widgets/CDetailView.php(210): CHtml::value(Object(Auction), 'other')
+#3 /Volumes/Data/projects/yii/framework/web/CBaseController.php(174): CDetailView->run()
+#4 /Volumes/Data/projects/HighHopes/protected/views/auction/view.php(28): CBaseController->widget('zii.widgets.CDe...', Array)
+#5 /Volumes/Data/projects/yii/framework/web/CBaseController.php(127): require('/Volumes/Data/p...')
+#6 /Volumes/Data/projects/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Volumes/Data/p...', Array, true)
+#7 /Volumes/Data/projects/yii/framework/web/CController.php(870): CBaseController->renderFile('/Volumes/Data/p...', Array, true)
+#8 /Volumes/Data/projects/yii/framework/web/CController.php(783): CController->renderPartial('view', Array, true)
+#9 /Volumes/Data/projects/HighHopes/protected/controllers/AuctionController.php(73): CController->render('view', Array)
+#10 [internal function]: AuctionController->actionView('1')
+#11 /Volumes/Data/projects/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(AuctionController), Array)
+#12 /Volumes/Data/projects/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(AuctionController), Object(ReflectionMethod), Array)
+#13 /Volumes/Data/projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#14 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 /Volumes/Data/projects/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#16 /Volumes/Data/projects/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 /Volumes/Data/projects/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 /Volumes/Data/projects/yii/framework/web/CController.php(292): CFilterChain->run()
+#20 /Volumes/Data/projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(276): CController->run('view')
+#22 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('auction/view')
+#23 /Volumes/Data/projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#24 /Volumes/Data/projects/HighHopes/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/index.php/auction/1
+HTTP_REFERER=http://highhopes/index.php/auction/index
+---
+2012/06/07 11:16:15 [error] [exception.CException] exception 'CException' with message 'Auction and its behaviors do not have a method or closure named "user".' in /Volumes/Data/projects/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(226): CComponent->__call('user', Array)
+#1 /Volumes/Data/projects/HighHopes/protected/views/auction/index.php(18): CActiveRecord->__call('user', Array)
+#2 /Volumes/Data/projects/HighHopes/protected/views/auction/index.php(18): Auction->user()
+#3 /Volumes/Data/projects/yii/framework/web/CBaseController.php(127): require('/Volumes/Data/p...')
+#4 /Volumes/Data/projects/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Volumes/Data/p...', Array, true)
+#5 /Volumes/Data/projects/yii/framework/web/CController.php(870): CBaseController->renderFile('/Volumes/Data/p...', Array, true)
+#6 /Volumes/Data/projects/yii/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#7 /Volumes/Data/projects/HighHopes/protected/controllers/AuctionController.php(61): CController->render('index', Array)
+#8 /Volumes/Data/projects/yii/framework/web/actions/CInlineAction.php(50): AuctionController->actionIndex()
+#9 /Volumes/Data/projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#10 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 /Volumes/Data/projects/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#12 /Volumes/Data/projects/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 /Volumes/Data/projects/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 /Volumes/Data/projects/yii/framework/web/CController.php(292): CFilterChain->run()
+#16 /Volumes/Data/projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(276): CController->run('index')
+#18 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('auction/index')
+#19 /Volumes/Data/projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#20 /Volumes/Data/projects/HighHopes/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/index.php/auction/index
+HTTP_REFERER=http://highhopes/index.php/auction/2
+---
+2012/06/07 11:16:26 [error] [exception.CException] exception 'CException' with message 'Property "Auction.user" is not defined.' in /Volumes/Data/projects/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Volumes/Data/projects/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('user')
+#1 /Volumes/Data/projects/HighHopes/protected/views/auction/index.php(18): CActiveRecord->__get('user')
+#2 /Volumes/Data/projects/yii/framework/web/CBaseController.php(127): require('/Volumes/Data/p...')
+#3 /Volumes/Data/projects/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Volumes/Data/p...', Array, true)
+#4 /Volumes/Data/projects/yii/framework/web/CController.php(870): CBaseController->renderFile('/Volumes/Data/p...', Array, true)
+#5 /Volumes/Data/projects/yii/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#6 /Volumes/Data/projects/HighHopes/protected/controllers/AuctionController.php(61): CController->render('index', Array)
+#7 /Volumes/Data/projects/yii/framework/web/actions/CInlineAction.php(50): AuctionController->actionIndex()
+#8 /Volumes/Data/projects/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 /Volumes/Data/projects/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#11 /Volumes/Data/projects/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#12 /Volumes/Data/projects/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#13 /Volumes/Data/projects/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 /Volumes/Data/projects/yii/framework/web/CController.php(292): CFilterChain->run()
+#15 /Volumes/Data/projects/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(276): CController->run('index')
+#17 /Volumes/Data/projects/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('auction/index')
+#18 /Volumes/Data/projects/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#19 /Volumes/Data/projects/HighHopes/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php/auction/index
+HTTP_REFERER=http://highhopes/index.php/auction/2
+---

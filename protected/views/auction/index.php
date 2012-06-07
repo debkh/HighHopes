@@ -16,6 +16,7 @@ $this->menu = array(
 <div class="block">
 	<div class="content">
 		<h2 class="title">Auctions</h2>
+
 		<?php $this->renderPartial('_grid', array(
 			'model' => $model,
 		)); ?>
