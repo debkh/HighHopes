@@ -27,7 +27,6 @@ $this->menu = array(
 				),
 			)); ?>
 		</div>
-
     </div>
 
     <div class="content">
@@ -39,5 +38,3 @@ $this->menu = array(
         </div>
     </div>
 </div>
-
-
