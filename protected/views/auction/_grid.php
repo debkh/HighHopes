@@ -1,4 +1,4 @@
-<?php $provider = $model->search(); ?>
+<pre><?php $provider = $model->search();?></pre>
 <div class="inner" id="auction-grid-inner">
 	<?php $this->widget('zii.widgets.grid.CGridView', array(
 		'id' => 'auction-grid',
@@ -15,8 +15,10 @@
 		'template' => '{items}',
 		'columns' => array(
 			'id',
+            'owner.username::Owner',
 			'name',
 			'description',
+            'lotsCount::Lots',
 			array(
 				'class' => 'EButtonColumn',
 				'deleteConfirmation' => 'Do you really want to delete this auction?',

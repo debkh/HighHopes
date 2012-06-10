@@ -9,9 +9,10 @@ $this->menu = array(
 	)),
 );
 ?>
+
 <div class="block">
 	<div class="content">
-		<h2 class="title">Auction's details</h2>
+		<h2 class="title">Auction's details <?php echo $model->id; ?></h2>
 		<div class="inner">
 			<?php $this->widget('zii.widgets.CDetailView', array(
 				'data' => $model,
@@ -19,7 +20,6 @@ $this->menu = array(
 					'id',
 					'name',
 					'description',
-					'other',
 				),
 				'itemTemplate' => "<tr class=\"{class}\"><td style=\"width: 120px\"><b>{label}</b></td><td>{value}</td></tr>\n",
 				'htmlOptions' => array(
@@ -27,5 +27,14 @@ $this->menu = array(
 				),
 			)); ?>
 		</div>
-	</div>
+    </div>
+
+    <div class="content">
+        <h2 class="title">Auction's details</h2>
+        <div class="inner">
+            <?php $this->renderPartial('_lots', array(
+                    'lots' => $model->lots
+            ));?>
+        </div>
+    </div>
 </div>

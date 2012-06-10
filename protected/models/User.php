@@ -53,7 +53,8 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-		);
+            'owner' => array(self::HAS_MANY, 'Auction', 'user_id'),
+        );
 	}
 
 	/**
@@ -68,6 +69,10 @@ class User extends CActiveRecord
 			'email' => 'Email',
 		);
 	}
+
+    public function validatePassword($password){
+        return $this->password === $password;
+    }
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
