@@ -71,6 +71,7 @@ class AuctionController extends Controller
 
 		$this->render('view', array(
 			'model' => $this->loadModel($id),
+            'lotsProvider' => Lots::model()->getLotsByAuctionID($id),
 		));
 	}
 
@@ -158,6 +159,7 @@ class AuctionController extends Controller
 		}
 		return $model;
 	}
+
 
 	/**
 	 * Performs the AJAX validation.

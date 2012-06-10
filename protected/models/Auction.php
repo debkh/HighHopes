@@ -93,4 +93,6 @@ class Auction extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+
 }

@@ -73,9 +73,9 @@ hr {
 }
 
 #user-navigation {
-  z-index: 99999999;
+  z-index: 999;
   top: auto;
-  bottom: 1px;
+  bottom: -18px;
   right: 25px;
 }
 
@@ -99,6 +99,12 @@ hr {
 
 #main .block .content {
   padding-top: 1px;
+}
+
+.text-white {
+    color: #fff;
+    text-shadow: 0px 0px 3px #000;
+    filter: dropshadow(color=#000, offx=0, offy=0);
 }
 
 #main .block .content h2 {
@@ -493,7 +499,8 @@ a.button, button.button, .pagination a, .pagination span {
 
 
 
-<!-- OS X Buttons -->
+/* OS X Buttons */
+
 
 
 .osx {

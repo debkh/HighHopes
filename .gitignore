@@ -165,3 +165,5 @@ pip-log.txt
 .DS_Store
 .idea/*
 protected/runtime/*
+protected/config/main.php
+assets/*

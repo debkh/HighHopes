@@ -14,8 +14,10 @@
 					<a href="<?php echo Yii::app()->homeUrl; ?>"><?php echo Yii::app()->name; ?></a>
 				</h1>
 				<div id="user-navigation">
+
 					<?php $this->widget('zii.widgets.CMenu', array(
 						'items' => array(
+                            array('label' => Yii::app()->user->name, 'linkOptions' => array('class' => 'text-white'), 'visible' => !Yii::app()->user->isGuest),
 							array('label' => 'Logout', 'url' => array('/site/logout'), 'linkOptions' => array('class' => 'osx'), 'visible' => !Yii::app()->user->isGuest),
 						),
 						'htmlOptions' => array(

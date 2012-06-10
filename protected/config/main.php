@@ -56,10 +56,10 @@ return array(
 		// uncomment the following to use a MySQL database
         */
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=dev_highhopes',
+			'connectionString' => 'mysql:host=openserver;dbname=dev_highhopes',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '1',
+			'username' => 'mysql',
+			'password' => 'mysql',
 			'charset' => 'utf8',
             'enableProfiling'=>true,
             'enableParamLogging'=>true,

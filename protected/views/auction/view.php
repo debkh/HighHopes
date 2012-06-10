@@ -30,10 +30,10 @@ $this->menu = array(
     </div>
 
     <div class="content">
-        <h2 class="title">Auction's details</h2>
+        <h2 class="title">Lots</h2>
         <div class="inner">
             <?php $this->renderPartial('_lots', array(
-                    'lots' => $model->lots
+                    'lotsProvider' => $lotsProvider
             ));?>
         </div>
     </div>

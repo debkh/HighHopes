@@ -55,7 +55,7 @@ class Lots extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-		    'auctions' => array(self::BELONGS_TO, 'Auction', 'auction_id'),
+		    'lots' => array(self::BELONGS_TO, 'Auction', 'auction_id'),
         );
 	}
 
@@ -92,4 +92,23 @@ class Lots extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+    /**
+     * Retrieves a list of models based on the current search/filter conditions.
+     * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
+     */
+    public function getLotsByAuctionID($iAuctionID)
+    {
+        // Warning: Please modify the following code to remove attributes that
+        // should not be searched.
+
+        $criteria=new CDbCriteria;
+
+        $criteria->compare('id',$this->id);
+        $criteria->condition = 'auction_id=1';
+
+        return new CActiveDataProvider($this, array(
+            'criteria'=>$criteria,
+        ));
+    }
 }
