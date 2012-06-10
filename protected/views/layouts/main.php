@@ -16,8 +16,7 @@
 				<div id="user-navigation">
 					<?php $this->widget('zii.widgets.CMenu', array(
 						'items' => array(
-							array('label' => 'Home', 'url' => Yii::app()->homeUrl),
-							array('label' => 'Logout', 'url' => array('/site/logout'), 'linkOptions' => array('class' => 'logout'), 'visible' => !Yii::app()->user->isGuest),
+							array('label' => 'Logout', 'url' => array('/site/logout'), 'linkOptions' => array('class' => 'osx'), 'visible' => !Yii::app()->user->isGuest),
 						),
 						'htmlOptions' => array(
 							'class' => 'wat-cf',
@@ -28,6 +27,7 @@
 					<?php $this->widget('zii.widgets.CMenu', array(
 						'items' => array(
                             array('label' => 'Main', 'url' => array('/auction'),'itemOptions' => array('class' => 'first')),
+                            array('label' => 'Create Auction', 'url' => array('/auction/create')),
 							// Place menu items here, first item should have class 'first' (use 'itemOptions' => array('class' => 'first'))
 						),
 						'htmlOptions' => array(
