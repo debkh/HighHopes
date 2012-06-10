@@ -16,32 +16,50 @@ $this->breadcrumbs=array(
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
+    'focus' => array($model, 'username'),
+    'htmlOptions' => array(
+        'class' => 'form',
+    ),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+    <div class="group">
+        <?php if($model->hasErrors('username')): ?>
+			<div class="fieldWithErrors">
+		<?php endif; ?>
+        <?php echo $form->labelEx($model, 'username', array('class' => 'label')); ?>
+        <?php if ($model->hasErrors('username')): ?>
+        <span class="error"><?php echo $model->getError('username'); ?></span>
+			</div>
+		<?php endif; ?>
+        <?php echo $form->textField($model, 'username', array('size' => 60, 'maxlength' => 255, 'class' => 'text_field')); ?>
+    </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
+    <div class="group">
+        <?php if($model->hasErrors('password')): ?>
+			<div class="fieldWithErrors">
+		<?php endif; ?>
+        <?php echo $form->labelEx($model, 'password', array('class' => 'label')); ?>
+        <?php if ($model->hasErrors('password')): ?>
+        <span class="error"><?php echo $model->getError('password'); ?></span>
+			</div>
+		<?php endif; ?>
+        <?php echo $form->passwordField($model, 'password', array('size' => 60, 'maxlength' => 255, 'class' => 'text_field')); ?>
+    </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
-		<?php echo $form->passwordField($model,'password'); ?>
-		<?php echo $form->error($model,'password'); ?>
-		<p class="hint">
-			Hint: You may login with <tt>demo/demo</tt> or <tt>admin/admin</tt>.
-		</p>
-	</div>
+    <div class="group">
+        <?php if($model->hasErrors('rememberMe')): ?>
+			<div class="fieldWithErrors">
+		<?php endif; ?>
+        <?php echo $form->labelEx($model, 'rememberMe', array('class' => 'label')); ?>
+        <?php if ($model->hasErrors('rememberMe')): ?>
+        <span class="error"><?php echo $model->getError('rememberMe'); ?></span>
+			</div>
+		<?php endif; ?>
+        <?php echo $form->checkBox($model,'rememberMe'); ?>
+    </div>
 
-	<div class="row rememberMe">
-		<?php echo $form->checkBox($model,'rememberMe'); ?>
-		<?php echo $form->label($model,'rememberMe'); ?>
-		<?php echo $form->error($model,'rememberMe'); ?>
-	</div>
 
-	<div class="row buttons">
+	<div class="group navform wat-cf">
 		<?php echo CHtml::submitButton('Login'); ?>
 	</div>
 

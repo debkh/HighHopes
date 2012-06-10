@@ -75,3 +75,112 @@ Stack trace:
 REQUEST_URI=/index.php/auction/create
 in G:\web\domains\highhopes\protected\controllers\AuctionController.php (91)
 in G:\web\domains\highhopes\index.php (13)
+2012/06/09 17:53:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "login".' in G:\web\domains\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 G:\web\domains\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('login')
+#1 G:\web\domains\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 G:\web\domains\HighHopes\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/login
+---
+2012/06/09 17:53:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "logout".' in G:\web\domains\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 G:\web\domains\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('logout')
+#1 G:\web\domains\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 G:\web\domains\HighHopes\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/logout
+---
+2012/06/09 17:53:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in G:\web\domains\yii\framework\web\CController.php:484
+Stack trace:
+#0 G:\web\domains\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 G:\web\domains\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 G:\web\domains\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/images/ico...')
+#3 G:\web\domains\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 G:\web\domains\HighHopes\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/icons/tick.png
+HTTP_REFERER=http://highhopes/index.php/site/login
+---
+2012/06/09 17:53:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in G:\web\domains\yii\framework\web\CController.php:484
+Stack trace:
+#0 G:\web\domains\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 G:\web\domains\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 G:\web\domains\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/images/ico...')
+#3 G:\web\domains\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 G:\web\domains\HighHopes\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/icons/key.png
+HTTP_REFERER=http://highhopes/index.php/site/login
+---
+2012/06/09 17:53:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in G:\web\domains\yii\framework\web\CController.php:484
+Stack trace:
+#0 G:\web\domains\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 G:\web\domains\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 G:\web\domains\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/images/ico...')
+#3 G:\web\domains\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 G:\web\domains\HighHopes\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/icons/key.png
+HTTP_REFERER=http://highhopes/index.php/site/login
+---
+2012/06/09 17:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in G:\web\domains\yii\framework\web\CController.php:484
+Stack trace:
+#0 G:\web\domains\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 G:\web\domains\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 G:\web\domains\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/images/ico...')
+#3 G:\web\domains\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 G:\web\domains\HighHopes\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/icons/key.png
+HTTP_REFERER=http://highhopes/index.php/site/login
+---
+2012/06/09 17:54:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in G:\web\domains\yii\framework\web\CController.php:484
+Stack trace:
+#0 G:\web\domains\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 G:\web\domains\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 G:\web\domains\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/images/ico...')
+#3 G:\web\domains\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 G:\web\domains\HighHopes\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/icons/key.png
+HTTP_REFERER=http://highhopes/index.php/site/login
+---
+2012/06/09 17:59:56 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "G:\web\domains\HighHopes\protected\views\site\login.php". A CActiveForm widget does not have an endWidget() call.' in G:\web\domains\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 G:\web\domains\yii\framework\web\CController.php(870): CBaseController->renderFile('G:\web\domains\...', Array, true)
+#1 G:\web\domains\yii\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#2 G:\web\domains\HighHopes\protected\controllers\SiteController.php(92): CController->render('login', Array)
+#3 G:\web\domains\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 G:\web\domains\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 G:\web\domains\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 G:\web\domains\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 G:\web\domains\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#8 G:\web\domains\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#9 G:\web\domains\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 G:\web\domains\HighHopes\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/site/login
+---
+2012/06/09 18:00:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in G:\web\domains\yii\framework\web\CController.php:484
+Stack trace:
+#0 G:\web\domains\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 G:\web\domains\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 G:\web\domains\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/images/ico...')
+#3 G:\web\domains\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 G:\web\domains\HighHopes\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/icons/key.png
+HTTP_REFERER=http://highhopes/index.php/site/login
+---
+2012/06/09 18:00:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in G:\web\domains\yii\framework\web\CController.php:484
+Stack trace:
+#0 G:\web\domains\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 G:\web\domains\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 G:\web\domains\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/images/ico...')
+#3 G:\web\domains\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 G:\web\domains\HighHopes\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/icons/key.png
+HTTP_REFERER=http://highhopes/index.php/site/login
+---
