@@ -2,6 +2,7 @@
 $this->menu = array(
 	array('label' => 'Auctions', 'url' => array('index')),
 	array('label' => 'Create auction', 'url' => array('create')),
+    array('label' => 'Create Lot', 'url' => array('/lots/create', 'id' => $model->id)),
 	array('label' => 'Update auction', 'url' => array('update', 'id' => $model->id)),
 	array('label' => 'Delete auction', 'url' => '#', 'linkOptions' => array(
 		'submit' => array('delete', 'id' => $model->id),

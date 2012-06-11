@@ -1,9 +1,7 @@
 <?php
 $this->menu = array(
-	array('label' => 'Lots', 'url' => array('index')),
-	array('label' => 'Create lots', 'url' => array('create')),
-	array('label' => 'Update lots', 'url' => array('update', 'id' => $model->id)),
-	array('label' => 'Delete lots', 'url' => '#', 'linkOptions' => array(
+	array('label' => 'Edit', 'url' => array('update', 'id' => $model->id)),
+	array('label' => 'Delete', 'url' => '#', 'linkOptions' => array(
 		'submit' => array('delete', 'id' => $model->id),
 		'confirm' => 'Do you really want to delete this lots?',
 	)),

@@ -105,7 +105,7 @@ class Lots extends CActiveRecord
         $criteria=new CDbCriteria;
 
         $criteria->compare('id',$this->id);
-        $criteria->condition = 'auction_id=1';
+        $criteria->condition = 'auction_id='.$iAuctionID;
 
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,

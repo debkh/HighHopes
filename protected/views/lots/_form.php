@@ -7,17 +7,9 @@
 	),
 )); ?>
 		
-	<div class="group">
-		<?php if($model->hasErrors('auction_id')): ?>
-			<div class="fieldWithErrors">
-		<?php endif; ?>
-		<?php echo $form->labelEx($model, 'auction_id', array('class' => 'label')); ?>
-		<?php if ($model->hasErrors('auction_id')): ?>
-				<span class="error"><?php echo $model->getError('auction_id'); ?></span>
-			</div>
-		<?php endif; ?>
-		<?php echo $form->textField($model, 'auction_id', array('class' => 'text_field')); ?>
-	</div>
+
+		<?php echo $form->hiddenField($model, 'auction_id', array('class' => 'text_field')); ?>
+
 		
 	<div class="group">
 		<?php if($model->hasErrors('name')): ?>
