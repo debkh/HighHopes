@@ -9,7 +9,7 @@ $('#auction-grid-actions button.action-create').live('click', function(){
 });
 	");
 $this->menu = array(
-	array('label' => 'Auctions', 'url' => array('index')),
+	array('label' => 'Dashboard', 'url' => array('index')),
 	array('label' => 'Create auction', 'url' => array('create')),
 );
 ?>

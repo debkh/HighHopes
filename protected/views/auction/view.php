@@ -1,10 +1,9 @@
 <?php
 $this->menu = array(
-	array('label' => 'Auctions', 'url' => array('index')),
-	array('label' => 'Create auction', 'url' => array('create')),
+	array('label' => 'Dashboard', 'url' => array('index')),
     array('label' => 'Create Lot', 'url' => array('/lots/create', 'id' => $model->id)),
-	array('label' => 'Update auction', 'url' => array('update', 'id' => $model->id)),
-	array('label' => 'Delete auction', 'url' => '#', 'linkOptions' => array(
+	array('label' => 'Edit', 'url' => array('update', 'id' => $model->id)),
+	array('label' => 'Delete', 'url' => '#', 'linkOptions' => array(
 		'submit' => array('delete', 'id' => $model->id),
 		'confirm' => 'Do you really want to delete this auction?',
 	)),
@@ -13,7 +12,7 @@ $this->menu = array(
 
 <div class="block">
 	<div class="content">
-		<h2 class="title">Auction's details <?php echo $model->id; ?></h2>
+		<h2 class="title">Detailed view</h2>
 		<div class="inner">
 			<?php $this->widget('zii.widgets.CDetailView', array(
 				'data' => $model,

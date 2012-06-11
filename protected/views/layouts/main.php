@@ -28,7 +28,7 @@
 				<div id="main-navigation">
 					<?php $this->widget('zii.widgets.CMenu', array(
 						'items' => array(
-                            array('label' => 'Main', 'url' => array('/auction'),'itemOptions' => array('class' => 'first')),
+                            array('label' => 'Dashboard', 'url' => array('/auction'),'itemOptions' => array('class' => 'first')),
                             array('label' => 'Create Auction', 'url' => array('/auction/create')),
 							// Place menu items here, first item should have class 'first' (use 'itemOptions' => array('class' => 'first'))
 						),

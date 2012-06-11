@@ -41,6 +41,8 @@ class Lots extends CActiveRecord
 			array('auction_id', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>255),
 			array('description', 'length', 'max'=>512),
+            array('price', 'numerical'),
+            array('creation_date', 'date'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, auction_id, name, description', 'safe', 'on'=>'search'),
@@ -69,6 +71,9 @@ class Lots extends CActiveRecord
 			'auction_id' => 'Auction',
 			'name' => 'Name',
 			'description' => 'Description',
+            'price' => 'Price',
+            'creation_date' => 'Creation Date',
+            'sold_date' => 'Sold Date',
 		);
 	}
 
@@ -87,6 +92,9 @@ class Lots extends CActiveRecord
 		$criteria->compare('auction_id',$this->auction_id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('description',$this->description,true);
+        $criteria->compare('price',$this->price,true);
+        $criteria->compare('creation_date',$this->creation_date,true);
+        $criteria->compare('sold_date',$this->sold_date,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
