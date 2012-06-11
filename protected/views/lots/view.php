@@ -6,6 +6,7 @@ $this->menu = array(
 		'confirm' => 'Do you really want to delete this lots?',
 	)),
 );
+$model->auction;
 ?>
 <div class="block">
 	<div class="content">
@@ -15,8 +16,8 @@ $this->menu = array(
 				'data' => $model,
 				'attributes' => array(
 					'id',
-					'auction_id',
-					'name',
+					'auction.name:text:Auction Name',
+					'name:text:Lot Name',
 					'description',
 				),
 				'itemTemplate' => "<tr class=\"{class}\"><td style=\"width: 120px\"><b>{label}</b></td><td>{value}</td></tr>\n",

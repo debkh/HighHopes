@@ -34,6 +34,18 @@
 		<?php endif; ?>
 		<?php echo $form->textField($model, 'description', array('size' => 60, 'maxlength' => 512, 'class' => 'text_field')); ?>
 	</div>
+
+    <div class="group">
+        <?php if($model->hasErrors('price')): ?>
+                <div class="fieldWithErrors">
+            <?php endif; ?>
+        <?php echo $form->labelEx($model, 'price', array('class' => 'label')); ?>
+        <?php if ($model->hasErrors('price')): ?>
+        <span class="error"><?php echo $model->getError('price'); ?></span>
+                </div>
+            <?php endif; ?>
+        <?php echo $form->textField($model, 'price', array('size' => 60, 'maxlength' => 512, 'class' => 'text_field')); ?>
+    </div>
 	
 	<div class="group navform wat-cf">
 		<button class="button" type="submit">
