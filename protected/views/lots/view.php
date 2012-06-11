@@ -1,13 +1,12 @@
 <?php
 $this->menu = array(
-	array('label' => 'Lots', 'url' => array('index')),
-	array('label' => 'Create lots', 'url' => array('create')),
-	array('label' => 'Update lots', 'url' => array('update', 'id' => $model->id)),
-	array('label' => 'Delete lots', 'url' => '#', 'linkOptions' => array(
+	array('label' => 'Edit', 'url' => array('update', 'id' => $model->id)),
+	array('label' => 'Delete', 'url' => '#', 'linkOptions' => array(
 		'submit' => array('delete', 'id' => $model->id),
 		'confirm' => 'Do you really want to delete this lots?',
 	)),
 );
+$model->auction;
 ?>
 <div class="block">
 	<div class="content">
@@ -17,8 +16,8 @@ $this->menu = array(
 				'data' => $model,
 				'attributes' => array(
 					'id',
-					'auction_id',
-					'name',
+					'auction.name:text:Auction Name',
+					'name:text:Lot Name',
 					'description',
 				),
 				'itemTemplate' => "<tr class=\"{class}\"><td style=\"width: 120px\"><b>{label}</b></td><td>{value}</td></tr>\n",

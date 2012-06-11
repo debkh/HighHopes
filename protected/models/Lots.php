@@ -8,6 +8,9 @@
  * @property integer $auction_id
  * @property string $name
  * @property string $description
+ * @property double $price
+ * @property string $creation_date
+ * @property string $sold_date
  */
 class Lots extends CActiveRecord
 {
@@ -37,13 +40,15 @@ class Lots extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('auction_id, name, description', 'required'),
+			array('auction_id, name, description, price', 'required'),
 			array('auction_id', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>255),
 			array('description', 'length', 'max'=>512),
+            array('price', 'numerical'),
+            array('creation_date', 'date'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, auction_id, name, description', 'safe', 'on'=>'search'),
+			array('id, auction_id, name, description, price, creation_date, sold_date', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,7 +60,7 @@ class Lots extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-		    'lots' => array(self::BELONGS_TO, 'Auction', 'auction_id'),
+		    'auction' => array(self::BELONGS_TO, 'Auction', 'auction_id'),
         );
 	}
 
@@ -69,6 +74,9 @@ class Lots extends CActiveRecord
 			'auction_id' => 'Auction',
 			'name' => 'Name',
 			'description' => 'Description',
+            'price' => 'Price',
+            'creation_date' => 'Creation Date',
+            'sold_date' => 'Sold Date',
 		);
 	}
 
@@ -87,6 +95,9 @@ class Lots extends CActiveRecord
 		$criteria->compare('auction_id',$this->auction_id);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('description',$this->description,true);
+        $criteria->compare('price',$this->price);
+        $criteria->compare('creation_date',$this->creation_date,true);
+        $criteria->compare('sold_date',$this->sold_date,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -105,7 +116,7 @@ class Lots extends CActiveRecord
         $criteria=new CDbCriteria;
 
         $criteria->compare('id',$this->id);
-        $criteria->condition = 'auction_id=1';
+        $criteria->condition = 'auction_id='.$iAuctionID;
 
         return new CActiveDataProvider($this, array(
             'criteria'=>$criteria,

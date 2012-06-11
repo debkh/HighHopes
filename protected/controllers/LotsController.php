@@ -77,14 +77,15 @@ class LotsController extends Controller
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'index' page.
 	 */
-	public function actionCreate()
+	public function actionCreate($id)
 	{
 		$model = new Lots;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-		if (isset($_POST['Lots']))
+		if (isset($_POST['Lots']) && $id)
 		{
 			$model->attributes = $_POST['Lots'];
+            $model->auction_id = $id;
 			if ($model->save())
 			{
 				$this->redirect(array('index'));
