@@ -21,6 +21,9 @@
         array(
             'class' => 'EButtonColumn',
             'deleteConfirmation' => 'Do you really want to delete this auction?',
+            'viewButtonUrl'=>'Yii::app()->createUrl("/lots/view", array("id" => $data->id))',
+            'deleteButtonUrl'=>'Yii::app()->createUrl("/lots/delete", array("id" => $data->id))',
+            'updateButtonUrl'=>'Yii::app()->createUrl("/lots/update", array("id" => $data->id))',
         ),
     ),
 
